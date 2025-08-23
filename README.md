@@ -1,5 +1,6 @@
 # 🌸 Iris Flower Classifier  
 
+![CI](https://github.com/JosephS96/iris-flower-classification/actions/workflows/ci.yml/badge.svg)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)  
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)](https://scikit-learn.org/)  
 [![Jupyter Notebook](https://img.shields.io/badge/jupyter-notebook-lightgrey)](https://jupyter.org/)  
