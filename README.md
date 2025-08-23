@@ -7,7 +7,7 @@
 
 A simple **machine learning project** that classifies iris flowers into three species (*setosa, versicolor, virginica*) based on their sepal and petal dimensions.  
 
-This project is a great starting point for ML, showcasing:
+This project showcases:
 - Data exploration and visualization  
 - Training classical ML algorithms (Logistic Regression, Decision Tree, Random Forest, SVM)  
 - Evaluation with metrics and confusion matrix  
@@ -86,8 +86,9 @@ This will output metrics and save results (confusion matrix, accuracy) under /re
 
 ## ✅ Tests
 Run simple unit tests to validate dataset loading & preprocessing:
-
+```bash
 pytest tests/
+```
 
 ## 📈 Future Improvements
 Add hyperparameter tuning with GridSearchCV

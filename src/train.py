@@ -8,6 +8,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from model import get_model, evaluate
 from data import load_data
+from utils import save_metrics, plot_confusion_matrix
 
 
 def main(model_name: str, test_size: float = 0.2, random_state: int = 42):
@@ -32,21 +33,10 @@ def main(model_name: str, test_size: float = 0.2, random_state: int = 42):
 
     # Save metrics
     metrics_path = os.path.join("results", "metrics.json")
-    with open(metrics_path, "w") as f:
-        json.dump({"model": model_name, "accuracy": acc}, f, indent=4)
+    save_metrics({"model": model_name, "accuracy": acc}, metrics_path)
 
     # Save confusion matrix as image
-    plt.figure(figsize=(6, 4))
-    sns.heatmap(
-        cm, annot=True, fmt="d", cmap="Blues",
-        xticklabels=class_names, yticklabels=class_names
-    )
-    plt.xlabel("Predicted")
-    plt.ylabel("Actual")
-    plt.title(f"Confusion Matrix - {model_name}")
-    plt.tight_layout()
-    plt.savefig("results/confusion_matrix.png")
-    plt.close()
+    plot_confusion_matrix(cm, class_names, "results/confusion_matrix.png")
 
     print(f"Results saved in /results/")
 
