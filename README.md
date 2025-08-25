@@ -43,7 +43,7 @@ iris-flower-classifier/
 
 Clone the repository:  
 ```bash
-git clone https://github.com/your-username/iris-flower-classifier.git
+git clone https://github.com/JosephS96/iris-flower-classification.git
 cd iris-flower-classifier
 ```
 
