@@ -70,7 +70,7 @@ jupyter notebook notebooks/iris_exploration.ipynb
 ```bash
 python src/train.py --model random_forest
 ```
-Other options: `logistic_regression`, `decision_tree`, `svm`.
+Other options: `logistic_regression`, `decision_tree`, `svm`, `dummy`
 
 Example:
 ```bash
@@ -79,11 +79,14 @@ python src/train.py --model svm
 This will output metrics and save results (confusion matrix, accuracy) under /results/.
 
 ## 📊 Results
-**Best Model**: Random Forest Classifier
+**Best Model**: Random Forest Classifier, Logistic Regression, Decision Tree and SVM
 
-**Accuracy**: ~97% on test set
+**Accuracy**: ~97% on all classifiers except the Dummy Classifier
 
 📌 Example confusion matrix:
+
+![Confusion Matrix](results/confusion_matrix.png)
+
 
 ## ✅ Tests
 Run simple unit tests to validate dataset loading & preprocessing:
@@ -92,9 +95,6 @@ pytest tests/
 ```
 
 ## 📈 Future Improvements
-Add hyperparameter tuning with GridSearchCV
-Deploy as a simple Flask/Streamlit web app for interactive predictions
-Convert pipeline into a scikit-learn Pipeline object for reusability
-
-## 📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+- Add hyperparameter tuning with GridSearchCV
+- Deploy as a simple Flask/Streamlit web app for interactive predictions
+- Convert pipeline into a scikit-learn Pipeline object for reusability

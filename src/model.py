@@ -3,6 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
+from sklearn.dummy import DummyClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 
@@ -13,6 +14,7 @@ def get_model(name: str):
         "decision_tree": DecisionTreeClassifier(),
         "random_forest": RandomForestClassifier(n_estimators=100),
         "svm": SVC(kernel="linear", probability=True),
+        "dummy": DummyClassifier(strategy="most_frequent")
     }
     if name not in models:
         raise ValueError(f"Unknown model: {name}. Choose from {list(models.keys())}")
